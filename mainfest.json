@@ -1,0 +1,19 @@
+{
+    "short_name": "Karla López-Guerra",
+    "name": "Karla López-Guerra | DIBIZ - Digital Business Cards",
+    "description": "Embajador de Marca",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "display": "standalone",
+    "orientation": "portrait",
+    "start_url": "/karlamazdauniversidad/?launcher=true",
+    "scope": "/karlamazdauniversidad/",
+    "icons": [
+      {
+        "src": "https://res.cloudinary.com/dmabeivkl/image/upload/w_200,fl_lossy,f_auto/v1598369254/profile-image/o5rdymoqzbfgfknieqfb.jpg",
+        "type": "image/png",
+        "sizes": "144x144"
+      }
+    ]  
+  }
+  

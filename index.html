@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Bussines Card</title>
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="fonts/lineo-icon/style.css" rel="stylesheet">
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="style.css">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+
+	</head>
+
+
+	<body class="home">
+		
+		<div id="site-content">
+			<header class="site-header" class="headerImage" data-bg-image="dummy/page-head-bg.jpg">
+				<div class="container">
+					<!-- Default snippet for navigation -->									
+					<div class="branding">
+						<h1 class="site-title" id="nombreItem"></h1>						
+					</div>
+					<div class="social-links" id="socialLinks">
+						
+					</div>
+				</div>
+			</header>
+
+			<main class="main-content">
+				<div class="fullwidth-block" id="about">
+					<div class="container">
+						<figure class="author-image"><img src="dummy/foto.jpg" alt="Steven Hanson"></figure>
+						<h2 class="section-title" id="empresaItem"></h2>
+						<h3 class="section-desc" id="puestoItem"></h3>
+						<p id="resumenItem" align="justify"></p>
+
+						<div class="row">
+							<div class="col-md-3">
+								<div class="feature">
+									<div class="feature-icon gradient"><i class="icono icono-webapp"></i></div>
+									<h2 class="feature-title">Sitio Web</h2>
+									<p><a href="" target="_blank" id="sitioWebItem"></a></p>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="feature">
+									<div class="feature-icon gradient"><i class="icono icono-tel"></i></div>
+									<h2 class="feature-title">Tel&eacute;fono</h2>
+									<p id="telefonoItem"></p>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="feature">
+									<div class="feature-icon gradient"><i class="icono icono-mail"></i></div>
+									<h2 class="feature-title">Correo</h2>
+									<p><a href="" target="_blank" id="emailItem"></a></p>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="feature">
+									<div class="feature-icon gradient"><i class="icono icono-cel"></i></div>
+									<h2 class="feature-title">M&oacute;vil</h2>
+									<p><a href="" target="_blank" id="celularItem"></a></p>
+								</div>
+							</div>
+						</div> <!-- .row -->
+						<div class="row">														
+							<div class="col-md-3">
+								<div class="feature">
+									<a href="" target="_blank" id="whatsAppItem">
+										<div class="feature-icon gradient"><i class="icono icono-whatsapp"></i></div>
+										<h2 class="feature-title">WhatsApp</h2>	
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="feature">
+									<div class="feature-icon gradient"><i class="icono icono-location"></i></div>
+									<h2 class="feature-title">Ubicaci&oacute;n</h2>
+									<p id="direccionItem"></p>									
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="feature">									
+									<div>  
+										<p id="mapsItem"></p>
+									</div>
+								</div>
+							</div>
+						</div> <!-- .row -->
+
+					</div> <!-- .container -->
+				</div> <!-- #about -->
+
+				<div class="fullwidth-block" id="principles" data-bg-image="dummy/section-bg-1.jpg">
+					<div class="container">
+						<h2 class="section-title">Compartir</h2>
+						<h3 class="section-desc">
+							<img src="images/share.png"/>
+						</h3>
+
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="step">								
+									<p style="text-align:center;">
+										<a target="_blank" id="shareFacebookItem" href="">
+											<img src="images/facebook.png" alt=""/>
+										</a>
+										&nbsp;
+										<a target="_blank" id="shareMailItem" href="">
+											<img src="images/mail.png" alt=""/>
+										</a>
+										&nbsp;
+										<a target="_blank" id="shareTwitterItem" href="">
+											<img src="images/twitter.png" alt=""/>
+										</a>
+										&nbsp;									
+										<a target="_blank" id="sharePinterestItem" href="">
+											<img src="images/pinterest.png" alt=""/>
+										</a>							
+										&nbsp;
+										<a target="_blank" id="shareWhatsAppitem" data-action="share/whatsapp/share" href="">
+											<img src="images/whatsap.png" alt=""/>
+										</a>
+										&nbsp;
+										<a target="_blank" id="shareLinkedinItem" href="">
+											<img src="images/linkedin.png" alt=""/>
+										</a>
+									</p>
+								</div>
+							</div>
+						</div> <!-- .row -->
+					</div> <!-- .container -->
+				</div> <!-- #principles -->				
+			</main>
+
+			<footer class="site-footer">
+				<div class="container">
+					<p class="copy">Copyright 2021 HMV Soluciones</p>
+				</div>
+			</footer>
+		</div>
+
+		
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+		<script src="js/plugins.js"></script>
+
+		<script src="main.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+
+</html>
