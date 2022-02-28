@@ -1,16 +1,16 @@
 {    
-    "celular":"55 29 05 09 09",
-    "telefono":"52 50 96 66 & 55 57 06 15",
-    "sitioWeb":"http://www.juridicoenradio.com.mx",
-    "email":"kpadilla@juridicoenradio.com.mx",
-    "nombre":"Lic. Karla Corina Padilla Benitez",
-    "puesto":"A B O G A D A",
-    "empresa":"Rangel Lazcano & Asociados",
-    "direccion":"Presa las V&iacute;rgenes No. 115 P.B. Col. Irrigaci&oacute;n C.P. 11500",
-    "mapsFrame":"<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.2497147039257!2d-99.20764878520028!3d19.444797545329468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2021126bc0f5d%3A0xe02fb810496f6046!2sPresa%20Las%20V%C3%ADrgenes%20115%2C%20Col.%20Irrigaci%C3%B3n%2C%20Miguel%20Hidalgo%2C%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1615528640077!5m2!1ses-419!2smx' style='border:0;' allowfullscreen='' loading='lazy'></iframe>",
-    "resumen":"Rangel Lazcano y Asociados es un Despacho de Abogados fundada por profesionales unidos por el valor de la experiencia y servicios, todo esto a través de asesorias exitosas.<br/>Somos expertos profesionales en diversas disciplinas complementarias, cada uno de nosotros con una particularidad en común: Excelencia corporativa global.",
+    "celular":"55 56 74 39 74",
+    "telefono":"55 56 74 39 74",
+    "sitioWeb":"https://bussinesshmv.github.io/madic/",
+    "email":"madic@gmail.com",
+    "nombre":"MADIC AUTOMOTRIZ",
+    "puesto":"",
+    "empresa":"Servicios automotrices",
+    "direccion":"09320, Gabriela Mistral, Iztapalapa, 09320 Ciudad de México, CDMX",
+    "mapsFrame":"<iframe src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15055.62647079647!2d-99.067673!3d19.3731957!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4a5b73a399c8996b!2sMadic%20Automotriz!5e0!3m2!1ses-419!2smx!4v1646027117329!5m2!1ses-419!2smx' style='border:0;' allowfullscreen='' loading='lazy'></iframe>",
+    "resumen":"Profesionales en servicios automotrices, preventivos, clutch, frenos, ajustes de motor, escaneos, suspención, fallos, servicio de valet, pregunta por nuestros planes epeciales para flotillas vehiculares.",
     "socialNetwork":{
-        "facebook":"https://www.facebook.com/profile.php?id=100063559770563",
+        "facebook":"",
         "twitter":"",
         "instagram":"",
         "github":"",
@@ -18,13 +18,13 @@
         "linkedin":""
     },
     "compartir":{
-        "facebook":"https://www.facebook.com/sharer/sharer.php?u=https://bussinesshmv.github.io/karla-padilla/",
-        "twitter":"https://twitter.com/intent/tweet?url=https://bussinesshmv.github.io/karla-padilla/&text=Te%20presento%20Karla%20Padilla,%20profesional%20en%20asuntos%20legales%20y%20marcas.",
+        "facebook":"https://www.facebook.com/sharer/sharer.php?u=https://bussinesshmv.github.io/madic/",
+        "twitter":"https://twitter.com/intent/tweet?url=https://bussinesshmv.github.io/madic/&text=Te%20presento%20a%20Madic,%20profesionales%20en%20servicios%20automotrices.",
         "instagram":"",
         "github":"",
-        "pinterest":"https://pinterest.com/pin/create/button/?url=https://bussinesshmv.github.io/karla-padilla/&media=&description=Te%20presento%20Karla%20Padilla,%20profesional%20en%20asuntos%20legales%20y%20marcas.",
-        "linkedin":"https://www.linkedin.com/shareArticle?mini=true&url=https://bussinesshmv.github.io/karla-padilla/",
-        "mail":"mailto:info@example.com?&subject=&cc=&bcc=&body=https://bussinesshmv.github.io/karla-padilla/%0ATe%20presento%20Karla%20Padilla,%20profesional%20en%20temas%20legales%20y%20marcas.",
-        "whatsApp":"whatsapp://send?text=https://bussinesshmv.github.io/karla-padilla/"
+        "pinterest":"https://pinterest.com/pin/create/button/?url=https://bussinesshmv.github.io/madic/&media=&description=Te%20presento%20Madic,%20profesionales%20en%20servicios%20automotrices.",
+        "linkedin":"https://www.linkedin.com/shareArticle?mini=true&url=https://bussinesshmv.github.io/madic/",
+        "mail":"mailto:info@example.com?&subject=&cc=&bcc=&body=https://bussinesshmv.github.io/madic/%0ATe%20presento%20Madic,%20profesional%20en%20servicios%20automotrices.",
+        "whatsApp":"whatsapp://send?text=https://bussinesshmv.github.io/madic/"
     }
 }
