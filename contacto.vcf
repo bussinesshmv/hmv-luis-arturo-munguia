@@ -1,10 +1,6 @@
 BEGIN:VCARD
-VERSION:3.0
-N:Munguía;Luis;Arturo;Luis Arturo;
-FN:Luis Arturo Luis Arturo Munguía
-TITLE:C E O
-ORG:HMV Soluciones
-TEL;TYPE=CELL:5519166477
-EMAIL;TYPE=INTERNET;TYPE=HOME:servicio@hmvsoluciones.com
-URL:www.hmvsoluciones.com
+VERSION:2.1
+N:;MADIC;;;
+FN:MADIC
+TEL;CELL:5556743974
 END:VCARD
