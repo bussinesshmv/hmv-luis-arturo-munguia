@@ -1,14 +1,14 @@
 {    
-    "celular":"55 56 74 39 74",
-    "telefono":"55 56 74 39 74",
-    "sitioWeb":"https://bussinesshmv.github.io/madic/",
-    "email":"madic1@hotmail.com",
-    "nombre":"MADIC AUTOMOTRIZ",
-    "puesto":"",
-    "empresa":"Servicios automotrices",
-    "direccion":"09320, Gabriela Mistral, Iztapalapa, 09320 Ciudad de México, CDMX",
-    "mapsFrame":"<iframe src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15055.62647079647!2d-99.067673!3d19.3731957!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4a5b73a399c8996b!2sMadic%20Automotriz!5e0!3m2!1ses-419!2smx!4v1646027117329!5m2!1ses-419!2smx' style='border:0;' allowfullscreen='' loading='lazy'></iframe>",
-    "resumen":"Profesionales en servicios automotrices, preventivos, clutch, frenos, ajustes de motor, escaneos, suspensión, fallos, servicio de valet, pregunta por nuestros planes especiales para flotillas vehiculares.",
+    "celular":"55 19 16 64 77",
+    "telefono":"",
+    "sitioWeb":"https://bussinesshmv.github.io/hmv-luis-arturo-munguia/",
+    "email":"luis.munguia@hmvsoluciones.com, arturomv1930@gmail.com",
+    "nombre":"Luis Arturo Munguía Valdés",
+    "puesto":"CEO",
+    "empresa":"HMV Soluciones",
+    "direccion":"Union 25, Agricola de pantitlan, 08100 Ciudad de México, CDMX",
+    "mapsFrame":"<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.8860528194436!2d-99.07238588526471!3d19.41732868689303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fc68e8160ec1%3A0xd016030dfc58f935!2sAv.%20Uni%C3%B3n%2025%2C%20Agr%C3%ADcola%20Pantitl%C3%A1n%2C%20Iztacalco%2C%2008100%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1656025513670!5m2!1ses-419!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
+    "resumen":"Profesional en servicios de tecnología, con el compromiso de crear procesos de software simplificados acordes a las necesidades del negocio.",
     "socialNetwork":{
         "facebook":"",
         "twitter":"",
@@ -18,13 +18,13 @@
         "linkedin":""
     },
     "compartir":{
-        "facebook":"https://www.facebook.com/sharer/sharer.php?u=https://bussinesshmv.github.io/madic/",
-        "twitter":"https://twitter.com/intent/tweet?url=https://bussinesshmv.github.io/madic/&text=Te%20presento%20a%20Madic,%20profesionales%20en%20servicios%20automotrices.",
+        "facebook":"https://www.facebook.com/sharer/sharer.php?u=https://bussinesshmv.github.io/hmv-luis-arturo-munguia/",
+        "twitter":"https://twitter.com/intent/tweet?url=https://bussinesshmv.github.io/hmv-luis-arturo-munguia/&text=Te%20presento%20a%20Madic,%20profesionales%20en%20servicios%20automotrices.",
         "instagram":"",
         "github":"",
-        "pinterest":"https://pinterest.com/pin/create/button/?url=https://bussinesshmv.github.io/madic/&media=&description=Te%20presento%20Madic,%20profesionales%20en%20servicios%20automotrices.",
-        "linkedin":"https://www.linkedin.com/shareArticle?mini=true&url=https://bussinesshmv.github.io/madic/",
-        "mail":"mailto:info@example.com?&subject=&cc=&bcc=&body=https://bussinesshmv.github.io/madic/%0ATe%20presento%20Madic,%20profesional%20en%20servicios%20automotrices.",
-        "whatsApp":"whatsapp://send?text=https://bussinesshmv.github.io/madic/"
+        "pinterest":"https://pinterest.com/pin/create/button/?url=https://bussinesshmv.github.io/hmv-luis-arturo-munguia/&media=&description=Te%20presento%20Luis%20Arturo%20Munguia,%20profesionales%20en%20servicios%20TI.",
+        "linkedin":"https://www.linkedin.com/shareArticle?mini=true&url=https://bussinesshmv.github.io/hmv-luis-arturo-munguia/",
+        "mail":"mailto:info@example.com?&subject=&cc=&bcc=&body=https://bussinesshmv.github.io/hmv-luis-arturo-munguia/%0ATe%20presento%20Luis%20Arturo%20Munguia,%20profesional%20en%20servicios%20TI.",
+        "whatsApp":"whatsapp://send?text=https://bussinesshmv.github.io/hmv-luis-arturo-munguia/"
     }
 }
