@@ -322,8 +322,8 @@ body {
 }
 
 .btn {
-    background-color: var(--lime);
-    color: var(--ink);
+    background-color: var(--link);
+    color: var(--lime);
     border: none;
     padding: 16px 15px;
     border-radius: 0;
@@ -342,7 +342,7 @@ body {
 }
 
 .btn:hover {
-    background-color: var(--lime-hi);
+    background-color: var(--ink3);
 }
 
 /* Botón Mostrar QR — ghost */
