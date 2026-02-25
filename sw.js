@@ -2,11 +2,11 @@ const CACHE_NAME = 'ceo-v1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/vcard/styles.css',
-  '/vcard/app.js',
-  '/vcard/assets/logo.png',
-  '/vcard/assets/logo-192x192.png',
-  '/vcard/assets/logo-512x512.png'
+  '/hmv-luis-arturo-munguia/styles.css',
+  '/hmv-luis-arturo-munguia/app.js',
+  '/hmv-luis-arturo-munguia/assets/logo.png',
+  '/hmv-luis-arturo-munguia/assets/logo-192x192.png',
+  '/hmv-luis-arturo-munguia/assets/logo-512x512.png'
 ];
 
 self.addEventListener('install', (event) => {
