@@ -1,6 +1,5 @@
 /* ═══════════════════════════════════════════════════
    HMV SOLUCIONES — VCard CEO
-   Misma estructura que RegalaMomentos, diseño HMV
    Paleta: #0a0a0a · #c9e27e · #f0ede6
    Fuentes: Playfair Display + DM Mono + Lora
 ═══════════════════════════════════════════════════ */
@@ -124,11 +123,12 @@ body {
 /* ── CEO BLOCK (nuevo, no rompe estructura) ── */
 .ceo-block {
     display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 20px 24px;
+    flex-direction: column;   /* uno debajo del otro */
+    align-items: center;      /* centra horizontal */
+    justify-content: center;  /* centra vertical si hubiera altura */
+    padding: 24px;
     border-bottom: 1px solid var(--rule);
-    text-align: left;
+    text-align: center;
 }
 
 .ceo-monogram {
@@ -148,25 +148,19 @@ body {
 .ceo-info {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    align-items: center;
+    gap: 6px;
 }
 
 .ceo-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--chalk);
-    letter-spacing: -0.01em;
-    line-height: 1.2;
+    font-size: 18px;
+    letter-spacing: 0.02em;
 }
 
 .ceo-title {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    font-weight: 300;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--lime-lo);
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    color: var(--lime);
 }
 
 /* ── CONTACT INFO ── */
@@ -282,11 +276,11 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    counter-reset: sk;
+    
 }
 
 .services li {
-    counter-increment: sk;
+    
     margin: 0;
     padding: 9px 0 9px 4px;
     border-bottom: 1px solid var(--rule);
@@ -305,7 +299,7 @@ body {
 }
 
 .services li::before {
-    content: counter(sk, decimal-leading-zero);
+  
     font-family: 'DM Mono', monospace;
     font-size: 9px;
     color: var(--lime-lo);
@@ -314,7 +308,7 @@ body {
 }
 
 .services li:hover {
-    color: var(--chalk);
+    color: var(--lime);
     padding-left: 8px;
 }
 
@@ -485,4 +479,48 @@ body {
     .card {
         min-height: auto;
     }
+}
+/* ─────────────────────────────
+   CYBER TOP BAR — DYNAMIC SCAN
+───────────────────────────── */
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(201,226,126,0.2) 20%,
+        var(--lime) 50%,
+        rgba(201,226,126,0.2) 80%,
+        transparent 100%
+    );
+    animation: scanMove 4s linear infinite;
+    z-index: 2;
+}
+
+/* Glow suave debajo de la barra */
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(201,226,126,0.25),
+        transparent 70%
+    );
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+@keyframes scanMove {
+    from { transform: translateX(0); }
+    to { transform: translateX(50%); }
 }
