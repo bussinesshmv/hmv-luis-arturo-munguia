@@ -1,0 +1,26 @@
+{
+    "name": "Luis Arturo Munguia Valdés - HMV Soluciones",
+    "short_name": "Luis Munguia",
+    "description": "Tarjeta de presentación digital de HMV Soluciones",
+    "start_url": "/vcard/index.html",
+    "display": "standalone",
+    "background_color": "#FF007F",
+    "theme_color": "#FF007F",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "assets/logo-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/logo-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["business", "lifestyle"],
+    "prefer_related_applications": false
+}

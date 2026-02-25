@@ -1,0 +1,488 @@
+/* ═══════════════════════════════════════════════════
+   HMV SOLUCIONES — VCard CEO
+   Misma estructura que RegalaMomentos, diseño HMV
+   Paleta: #0a0a0a · #c9e27e · #f0ede6
+   Fuentes: Playfair Display + DM Mono + Lora
+═══════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&family=Lora:wght@700&display=swap');
+
+/* ── TOKENS ── */
+:root {
+    --ink:      #0a0a0a;
+    --ink2:     #111111;
+    --ink3:     #181818;
+    --rule:     #252525;
+    --lime:     #c9e27e;
+    --lime-hi:  #ddf098;
+    --lime-lo:  #8aad3f;
+    --lime-bg:  rgba(201,226,126,0.07);
+    --chalk:    #f0ede6;
+    --stone:    #999991;
+    --slate:    #555550;
+    --wa:       #25d366;
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── BODY ── */
+body {
+    font-family: 'DM Mono', monospace;
+    background-color: var(--ink);
+    color: var(--chalk);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201,226,126,0.08) 0%, transparent 60%);
+}
+
+/* ── CARD ── */
+.card {
+    background-color: var(--ink2);
+    color: var(--chalk);
+    border-radius: 4px;
+    padding: 0;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow:
+        0 2px 0 0 var(--lime),           /* top lime accent line */
+        0 20px 60px rgba(0,0,0,0.7),
+        0 0 0 1px var(--rule);
+    overflow: hidden;
+    animation: cardIn 0.7s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+@keyframes cardIn {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── LOGO TIPOGRÁFICO — Lora Bold ── */
+.logo-tipo {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+    padding: 32px 24px 24px;
+    border-bottom: 1px solid var(--rule);
+    line-height: 1;
+}
+
+.logo-hmv-word {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 42px;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+.logo-sol-word {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 42px;
+    color: var(--lime);
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+/* Para cuando uses imagen real en el futuro */
+.logo {
+    width: 160px;
+    height: auto;
+    margin: 32px auto 24px;
+    display: block;
+    object-fit: contain;
+}
+
+/* ── SLOGAN ── */
+.slogan {
+    font-family: 'DM Mono', monospace;
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--slate);
+    padding: 10px 24px 28px;
+    border-bottom: 1px solid var(--rule);
+    margin: 0;
+}
+
+.slogan b {
+    font-weight: 400;
+    color: var(--stone);
+}
+
+/* ── CEO BLOCK (nuevo, no rompe estructura) ── */
+.ceo-block {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--rule);
+    text-align: left;
+}
+
+.ceo-monogram {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--lime-lo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--lime);
+    flex-shrink: 0;
+}
+
+.ceo-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ceo-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--chalk);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+
+.ceo-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 300;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--lime-lo);
+}
+
+/* ── CONTACT INFO ── */
+.contact-info {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rule);
+    text-align: left;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 24px;
+    border-bottom: 1px solid rgba(37,37,37,0.6);
+    font-size: 13px;
+    font-weight: 300;
+    transition: background 0.15s;
+}
+
+.contact-info p:last-child {
+    border-bottom: none;
+}
+
+.contact-info p:hover {
+    background: var(--lime-bg);
+}
+
+.contact-info a {
+    color: var(--chalk);
+    text-decoration: none;
+    transition: color 0.15s;
+    flex: 1;
+}
+
+.contact-info p:hover a {
+    color: var(--lime-hi);
+}
+
+/* Tag CDMX / Mich */
+.tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--slate);
+    border: 1px solid var(--rule);
+    padding: 2px 6px;
+    flex-shrink: 0;
+}
+
+/* ── SOCIAL MEDIA ── */
+.social-media {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--rule);
+}
+
+.social-media a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 8px;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--slate);
+    border-right: 1px solid var(--rule);
+    transition: color 0.15s, background 0.15s;
+}
+
+.social-media a:last-child {
+    border-right: none;
+}
+
+.social-media a:hover {
+    color: var(--lime);
+    background: var(--lime-bg);
+}
+
+/* ── SERVICES ── */
+.services {
+    margin: 0;
+    padding: 22px 24px;
+    border-bottom: 1px solid var(--rule);
+    text-align: left;
+}
+
+.services h2 {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.services h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+}
+
+.services ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: sk;
+}
+
+.services li {
+    counter-increment: sk;
+    margin: 0;
+    padding: 9px 0 9px 4px;
+    border-bottom: 1px solid var(--rule);
+    font-size: 12.5px;
+    font-weight: 300;
+    color: var(--stone);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: color 0.15s, padding-left 0.2s;
+    cursor: default;
+}
+
+.services li:last-child {
+    border-bottom: none;
+}
+
+.services li::before {
+    content: counter(sk, decimal-leading-zero);
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--lime-lo);
+    min-width: 20px;
+    flex-shrink: 0;
+}
+
+.services li:hover {
+    color: var(--chalk);
+    padding-left: 8px;
+}
+
+/* ── BUTTONS ── */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.btn {
+    background-color: var(--lime);
+    color: var(--ink);
+    border: none;
+    padding: 16px 15px;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    background-color: var(--lime-hi);
+}
+
+/* Botón Mostrar QR — ghost */
+.buttons:nth-of-type(2) .btn,
+.buttons:nth-of-type(4) .btn {
+    background: transparent;
+    color: var(--stone);
+    border-top: none;
+}
+
+.buttons:nth-of-type(2) .btn:hover,
+.buttons:nth-of-type(4) .btn:hover {
+    background: var(--lime-bg);
+    color: var(--lime);
+}
+
+/* ── SHARE OPTIONS ── */
+.share-options {
+    margin: 0;
+    padding: 0;
+    display: none;
+    justify-content: center;
+    border-bottom: 1px solid var(--rule);
+}
+
+.share-options a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 8px;
+    font-size: 17px;
+    text-decoration: none;
+    color: var(--slate);
+    border-right: 1px solid var(--rule);
+    transition: color 0.15s, background 0.15s;
+}
+
+.share-options a:last-child {
+    border-right: none;
+}
+
+.share-options a:hover {
+    color: var(--lime);
+    background: var(--lime-bg);
+}
+
+/* ── QR CODE ── */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--ink);
+}
+
+.qr-code {
+    margin: 0;
+    padding: 24px;
+    display: none;
+    border-bottom: 1px solid var(--rule);
+    width: 100%;
+    justify-content: center;
+}
+
+/* Override del canvas generado por qrcode.js */
+.qr-code canvas,
+.qr-code img {
+    border: 1px solid var(--rule) !important;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ═══════════════════════════════════════════════════
+   ICONOS — mismos nombres de clase del original
+═══════════════════════════════════════════════════ */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* Clase base para todos los iconos FA */
+.icon-globe-custom::before,
+.icon-phone::before,
+.icon-whatsapp::before,
+.icon-email::before,
+.icon-instagram::before,
+.icon-facebook::before,
+.icon-tiktok::before,
+.icon-linkedin::before,
+.icon-twitter::before,
+.icon-pinterest::before {
+    font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
+    font-weight: 900;
+    font-size: 14px;
+    color: var(--lime-lo);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    flex-shrink: 0;
+    transition: color 0.15s;
+}
+
+.icon-globe-custom::before { content: '\f0ac'; }
+.icon-phone::before        { content: '\f095'; }
+.icon-whatsapp::before     { content: '\f232'; font-family: 'Font Awesome 6 Brands'; }
+.icon-email::before        { content: '\f0e0'; }
+.icon-instagram::before    { content: '\f16d'; font-family: 'Font Awesome 6 Brands'; }
+.icon-facebook::before     { content: '\f09a'; font-family: 'Font Awesome 6 Brands'; }
+.icon-tiktok::before       { content: '\e07b'; font-family: 'Font Awesome 6 Brands'; }
+.icon-linkedin::before     { content: '\f08c'; font-family: 'Font Awesome 6 Brands'; }
+.icon-twitter::before      { content: '\f099'; font-family: 'Font Awesome 6 Brands'; }
+.icon-pinterest::before    { content: '\f0d2'; font-family: 'Font Awesome 6 Brands'; }
+
+/* Hover en contacto */
+.contact-info p:hover .icon-globe-custom::before,
+.contact-info p:hover .icon-phone::before,
+.contact-info p:hover .icon-email::before {
+    color: var(--lime);
+}
+
+/* WhatsApp siempre verde */
+.icon-whatsapp::before { color: var(--wa) !important; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: var(--rule); }
+::-webkit-scrollbar-thumb:hover { background: var(--lime-lo); }
+
+/* ── RESPONSIVE ── */
+@media (min-width: 440px) {
+    body {
+        padding: 40px 20px;
+    }
+    .card {
+        min-height: auto;
+    }
+}

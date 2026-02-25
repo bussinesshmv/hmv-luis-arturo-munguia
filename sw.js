@@ -1,122 +1,76 @@
-console.log('[Service Worker] Hello world!');
+const CACHE_NAME = 'ceo-v1';
+const urlsToCache = [
+  '/',
+  '/index.html',
+  '/vcard/styles.css',
+  '/vcard/app.js',
+  '/vcard/assets/logo.png',
+  '/vcard/assets/logo-192x192.png',
+  '/vcard/assets/logo-512x512.png'
+];
 
-var CACHE_NAME = 'dibiz-v2'
-
-function onInstall(event) {
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(function prefill(cache) {
-      return cache.addAll([
-      ]);
-    })
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        // Intenta cachear todos los recursos, pero no falles si algunos no se pueden cachear
+        return Promise.allSettled(
+          urlsToCache.map(url => 
+            cache.add(url).catch(error => {
+              console.error('No se pudo cachear: ' + url, error);
+              // No lanzamos el error para que no falle toda la operación
+            })
+          )
+        );
+      })
+      .then(() => {
+        console.log('Caché inicializado');
+        return self.skipWaiting();
+      })
   );
-}
+});
 
-function onActivate(event) {
-  console.log('[Serviceworker]', "Activating!", event);
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Cache hit - devuelve la respuesta
+        if (response) {
+          return response;
+        }
+        return fetch(event.request).then(
+          (response) => {
+            // Comprueba si recibimos una respuesta válida
+            if(!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+
+            // Clona la respuesta
+            var responseToCache = response.clone();
+
+            caches.open(CACHE_NAME)
+              .then((cache) => {
+                cache.put(event.request, responseToCache);
+              });
+
+            return response;
+          }
+        );
+      })
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
+    caches.keys().then((cacheNames) => {
       return Promise.all(
-        cacheNames.filter(function(cacheName) {
-          // Return true if you want to remove this cache,
-          // but remember that caches are shared across
-          // the whole origin
-           return cacheName.indexOf('v1') !== 0;
-        }).map(function(cacheName) {
-          return caches.delete(cacheName);
+        cacheNames.map((cacheName) => {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
         })
       );
     })
   );
-}
-
-function onFetch(event) {
-  // Fetch from network, fallback to cached content, then offline.html for same-origin GET requests
-  var request = event.request;
-
-  if (!request.url.match(/^https?:\/\/example.com/) ) { return; }
-  if (request.method !== 'GET') { return; }
-
-  event.respondWith(
-    fetch(request)                                        // first, the network
-      .catch(function fallback() {
-         caches.match(request).then(function(response) {  // then, the cache
-           response || caches.match("/offline.html");     // then, /offline cache
-         })
-       })
-  );
-
-  // See https://jakearchibald.com/2014/offline-cookbook/#on-network-response for more examples
-}
-
-self.addEventListener('install', onInstall)
-// self.addEventListener('activate', onActivate)
-self.addEventListener('fetch', onFetch);
-
-
-self.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent Chrome 67 and earlier from automatically showing the prompt
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-  // Update UI notify the user they can add to home screen
-  btnAdd.style.display = 'block';
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// console.log('[Service Worker] Hello world!');
-
-// const CACHE_NAME = 'dibiz-cache-v2';
-// const urlsToCache = [
-//   './',
-//   '<%= asset_path "application.js" %>',
-//   '<%= asset_path "application.css" %>',
-// ];
-
-// self.addEventListener('install', function(event) {
-//   // Perform install steps
-//   event.waitUntil(
-//     caches.open(CACHE_NAME).then(function(cache) {
-//         console.log('Opened cache');
-//         return cache.addAll(urlsToCache);
-//       })
-//   );
-// });
-
-// self.addEventListener('activate', event => {
-//   event.waitUntil(self.clients.claim())
-//   console.log('Cache activated');
-// });
-
-// self.addEventListener('fetch', (event) => {
-//   event.respondWith(
-//     fetch(event.request).catch(function(){
-//       return caches.match(event.request);
-//     }) 
-//   );
-//   console.log('Network then cache');
-// });
-
-// self.addEventListener('beforeinstallprompt', (e) => {
-//   // Prevent Chrome 67 and earlier from automatically showing the prompt
-//   e.preventDefault();
-//   // Stash the event so it can be triggered later.
-//   deferredPrompt = e;
-//   // Update UI notify the user they can add to home screen
-//   btnAdd.style.display = 'block';
-// });
