@@ -61,6 +61,7 @@ function guardarContacto() {
         'TITLE:C E O',
         'ORG:HMV Soluciones',
         'TEL;TYPE=CELL,VOICE:5562072515',
+        'EMAIL;TYPE=WORK:luis.munguia@hmvsoluciones.com',
         'EMAIL;TYPE=WORK:hmv.soluciones@gmail.com',
         'URL:https://hmvsoluciones.com',
         'ADR;TYPE=WORK:;;CDMX;Michoacán;;Mexico',
